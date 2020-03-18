@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700|Dosis:100,200,300,400,500,600,700|Play:100,200,300,400,500,600,700");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: "Play", sans-serif;
+  font-weight: 200;
+  text-align: center;
+}
+
+a {
+  color: orange;
+}
+
+.icons {
+  top: 83%;
+  left: 0;
+  transform: translateY(-50%);
+  position: fixed;
+  z-index: 100;
+  text-shadow: 2px 2px 4px black;
+}
+
+.icons ul {
+  padding: initial;
+  font-size: 140%;
+}
+
+.icons ul li {
+  height: 30px;
+  width: 30px;
+  list-style-type: none;
+  padding-left: 9px;
+  padding-top: 5px;
+  margin-top: 2px;
+  background: slategray;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+.icons ul li:hover {
+  padding-left: 40px;
+  width: 30px;
+  transition: 0.3s;
+}
