@@ -6,6 +6,7 @@ class Hacker {
     this.startY = y;
     this.ready = true;
     this.dir = 0;
+    this.killed = false;
   }
 
   logic() {
@@ -16,6 +17,7 @@ class Hacker {
     }
     if (this.y > this.startY) {
       this.dir = 0;
+      this.killed = false;
       this.ready = true;
       this.y = this.startY;
     }

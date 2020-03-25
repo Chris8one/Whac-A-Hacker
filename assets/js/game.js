@@ -42,6 +42,14 @@ function draw() {
     brain();
   }
   image(crosshair, mouseX - 32, mouseY - 32, 64, 64);
+  //noStroke();
+  /* strokeWeight(0);
+    stroke(1);
+    fill(0); */
+  textSize(20);
+  for (var i = 0; i < hacke.length; i++) {
+    text("Your score is: " + score, 10, 20);
+  }
 }
 
 function brain() {
@@ -51,8 +59,19 @@ function brain() {
   }
 }
 
-/* function mousePressed() {
-  if () {
-    
+function mousePressed() {
+  for (var i = 0; hacke.length; i++) {
+    if (
+      !hacke[i].ready &&
+      !hacke[i].killed &&
+      mouseX < hacke[i].startX + 80 &&
+      mouseX > hacke[i].startX &&
+      mouseY < hacke[i].startY &&
+      mouseY > hacke[i].startY - 100
+    ) {
+      score += 1;
+      hacke[i].killed = true;
+      hacke[i].dir = 100;
+    }
   }
-} */
+}
