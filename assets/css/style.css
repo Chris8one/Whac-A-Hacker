@@ -53,3 +53,7 @@ a {
   width: 30px;
   transition: 0.3s;
 }
+
+#btnDiv {
+  text-align: center;
+}

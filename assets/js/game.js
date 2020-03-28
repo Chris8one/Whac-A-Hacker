@@ -1,3 +1,5 @@
+var splatTimer;
+var gameTimer;
 var hacke = [];
 var crosshair;
 var hacker_img;
@@ -6,13 +8,19 @@ var hitt = false;
 var rand;
 var signal;
 var backgr;
+var splat;
 var score = 0;
+var bloodX;
+var bloodY;
+var btn;
+var go;
 
 function preload() {
   hacker_img = loadImage("assets/img/hacker.png");
   comp_img = loadImage("assets/img/computer.png");
   crosshair = loadImage("assets/img/crosshair.png");
   backgr = loadImage("assets/img/matrix.jpg");
+  splat = loadImage("assets/img/splat.png");
 }
 
 function setup() {
@@ -22,6 +30,12 @@ function setup() {
   for (var i = 3; i < 5; i++) {
     hacke[i] = new Hacker((i - 2) * 310 - 60, 400);
   }
+  go = false;
+  btn = createButton("Play Game");
+}
+
+if (!go) {
+  text("Press the Play button to start the game.", 50, height / 2);
 }
 
 function draw() {
@@ -42,14 +56,16 @@ function draw() {
     brain();
   }
   image(crosshair, mouseX - 32, mouseY - 32, 64, 64);
-  //noStroke();
-  /* strokeWeight(0);
-    stroke(1);
-    fill(0); */
-  textSize(20);
+  strokeWeight(0);
+  textFont("Courier New");
+  textSize(30);
   for (var i = 0; i < hacke.length; i++) {
-    text("Your score is: " + score, 10, 20);
+    text("Your score is: " + score, 10, 40);
   }
+  if (frameCount - splatTimer < 10) {
+    image(splat, bloodX, bloodY, 100, 100);
+  }
+  noCursor();
 }
 
 function brain() {
@@ -72,6 +88,13 @@ function mousePressed() {
       score += 1;
       hacke[i].killed = true;
       hacke[i].dir = 100;
+      splatTimer = frameCount;
+      bloodX = hacke[i].startX + 10;
+      bloodY = hacke[i].startY - 80;
     }
   }
+}
+
+function startGame() {
+  go = true;
 }

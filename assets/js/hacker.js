@@ -13,7 +13,7 @@ class Hacker {
     this.y += this.dir;
 
     if (this.y < this.startY - 85) {
-      this.dir = 3.5;
+      this.dir = 40;
     }
     if (this.y > this.startY) {
       this.dir = 0;
