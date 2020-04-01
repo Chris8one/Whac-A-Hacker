@@ -2,26 +2,35 @@ class Hacker {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.count = 0;
-    this.dir = -1.5;
+    this.startX = x;
+    this.startY = y;
+    this.ready = true;
+    this.dir = 0;
+    this.killed = false;
   }
 
   logic() {
     this.y += this.dir;
 
-    if (this.y < 10) {
-      this.dir *= -1;
+    if (this.y < this.startY - 85) {
+      this.dir = 40;
     }
-    if (this.y > 100) {
+    if (this.y > this.startY) {
       this.dir = 0;
-      this.count += 1;
-      if (this.count > 100) {
-        this.count = 0;
-        this.dir = -1.5;
-      }
+      this.killed = false;
+      this.ready = true;
+      this.y = this.startY;
     }
   }
+
+  go() {
+    if (this.ready) {
+      this.dir = -2;
+      this.ready = false;
+    }
+  }
+
   show() {
-    image(hacker_img, this.x, this.y, 100, 100);
+    image(hacker_img, this.x, this.y, 100, 90);
   }
 }

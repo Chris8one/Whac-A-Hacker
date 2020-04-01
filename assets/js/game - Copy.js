@@ -1,4 +1,4 @@
-var splatTimer; // Timer for the blood splat
+var splatTimer;
 // var gameTimer = frameCount;
 var hacke = [];
 var crosshair;
@@ -11,8 +11,6 @@ var splat;
 var score = 0;
 var bloodX;
 var bloodY;
-var startGame; // Start button
-var timerValue = 20; // How many seconds the game will be running
 
 function preload() {
   hacker_img = loadImage("assets/img/hacker.png");
@@ -23,8 +21,6 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(900, 600);
-
   for (var i = 0; i < 3; i++) {
     hacke[i] = new Hacker(i * 300 + 95, 150);
   }
@@ -32,18 +28,13 @@ function setup() {
     hacke[i] = new Hacker((i - 2) * 310 - 60, 400);
   }
 
-  startGame = createButton("Start Game");
-  startGame.position(width / 1 + 10, 700);
-  startGame.mousePressed(gameTimer, game);
+  /* if (frameCount - gameTimer > 1000) {
+  } */
 }
 
 function draw() {
+  createCanvas(900, 600);
   image(backgr, 0, 0);
-  textAlign(CENTER);
-
-  if (timerValue < 10) {
-    text("0:0" + timerValue, 830, 40);
-  } else text("0:" + timerValue, 830, 40);
   for (var i = 0; i < hacke.length; i++) {
     hacke[i].show();
     hacke[i].logic();
@@ -63,7 +54,7 @@ function draw() {
   textFont("Courier New");
   textSize(30);
   for (var i = 0; i < hacke.length; i++) {
-    text("Your score is: " + score, 160, 40);
+    text("Your score is: " + score, 10, 40);
   }
   if (frameCount - splatTimer < 10) {
     image(splat, bloodX, bloodY, 100, 100);
@@ -96,12 +87,4 @@ function mousePressed() {
       bloodY = hacke[i].startY - 80;
     }
   }
-}
-
-function gameTimer() {
-  setInterval(function() {
-    if (timerValue > 0) {
-      timerValue--;
-    }
-  }, 1000);
 }
