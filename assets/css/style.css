@@ -29,7 +29,6 @@ a {
   transform: translateY(-50%);
   position: fixed;
   z-index: 100;
-  /* text-shadow: 2px 2px 4px black; */
 }
 
 .icons ul {
@@ -57,12 +56,6 @@ a {
 
 #btnDiv {
   text-align: center;
-}
-
-#startBtn {
-}
-
-#game {
 }
 
 #gameInfo {

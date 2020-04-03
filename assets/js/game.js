@@ -1,5 +1,4 @@
 var splatTimer; // Timer for the blood splat
-// var gameTimer = frameCount;
 var hacke = [];
 var crosshair;
 var hacker_img;
@@ -13,6 +12,7 @@ var bloodX;
 var bloodY;
 var startGame; // Start button
 var timerValue = 20; // How many seconds the game will be running
+var dir;
 
 function preload() {
   hacker_img = loadImage("assets/img/hacker.png");
@@ -32,6 +32,7 @@ function setup() {
     hacke[i] = new Hacker((i - 2) * 310 - 60, 400);
   }
 
+  dir = "startPage";
   startGame = createButton("Start Game");
   startGame.position(width / 1 + 10, 700);
   startGame.mousePressed(gameTimer, game);
@@ -39,36 +40,11 @@ function setup() {
 
 function draw() {
   image(backgr, 0, 0);
-  textAlign(CENTER);
-
-  if (timerValue < 10) {
-    text("0:0" + timerValue, 830, 40);
-  } else text("0:" + timerValue, 830, 40);
-  for (var i = 0; i < hacke.length; i++) {
-    hacke[i].show();
-    hacke[i].logic();
+  switch (dir) {
+    case "startPage":
+      game();
+      break;
   }
-  for (var i = 0; i < 3; i++) {
-    image(comp_img, i * 300 + 70, 150, 150, 100);
-  }
-  for (var i = 3; i < 5; i++) {
-    image(comp_img, (i - 2) * 310 - 85, 400, 150, 100);
-  }
-  rand = random(200);
-  if (rand < 3) {
-    brain();
-  }
-  image(crosshair, mouseX - 32, mouseY - 32, 64, 64);
-  strokeWeight(0);
-  textFont("Courier New");
-  textSize(30);
-  for (var i = 0; i < hacke.length; i++) {
-    text("Your score is: " + score, 160, 40);
-  }
-  if (frameCount - splatTimer < 10) {
-    image(splat, bloodX, bloodY, 100, 100);
-  }
-  noCursor();
 }
 
 function brain() {
@@ -105,3 +81,46 @@ function gameTimer() {
     }
   }, 1000);
 }
+
+function startPage() {
+  for (var i = 0; i < 3; i++) {
+    image(comp_img, i * 300 + 70, 150, 150, 100);
+  }
+  for (var i = 3; i < 5; i++) {
+    image(comp_img, (i - 2) * 310 - 85, 400, 150, 100);
+  }
+}
+
+function game() {
+  textAlign(CENTER);
+  if (timerValue < 10) {
+    text("0:0" + timerValue, 830, 40);
+  } else text("0:" + timerValue, 830, 40);
+  for (var i = 0; i < hacke.length; i++) {
+    hacke[i].show();
+    hacke[i].logic();
+  }
+  for (var i = 0; i < 3; i++) {
+    image(comp_img, i * 300 + 70, 150, 150, 100);
+  }
+  for (var i = 3; i < 5; i++) {
+    image(comp_img, (i - 2) * 310 - 85, 400, 150, 100);
+  }
+  rand = random(200);
+  if (rand < 3) {
+    brain();
+  }
+  image(crosshair, mouseX - 32, mouseY - 32, 64, 64);
+  strokeWeight(0);
+  textFont("Courier New");
+  textSize(30);
+  for (var i = 0; i < hacke.length; i++) {
+    text("Your score is: " + score, 160, 40);
+  }
+  if (frameCount - splatTimer < 10) {
+    image(splat, bloodX, bloodY, 100, 100);
+  }
+  noCursor();
+}
+
+function scorePage() {}
