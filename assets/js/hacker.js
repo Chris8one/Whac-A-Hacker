@@ -11,8 +11,9 @@ class Hacker {
 
   logic() {
     this.y += this.dir;
-
+    // Adjusts how far up the hackers will go
     if (this.y < this.startY - 85) {
+      // Controls the speed for the hackers to go down
       this.dir = 40;
     }
     if (this.y > this.startY) {
@@ -23,6 +24,7 @@ class Hacker {
     }
   }
 
+  // Adjusting the speed on the hackers on their way up
   go() {
     if (this.ready) {
       this.dir = -2;

@@ -7,31 +7,20 @@ I wanted to make my own version of it, so the choice became to shoot hackers.
 
 Who this game is for:
 
-- Almost for everyone, except for the very youngest due to that you are shooting the hackers and some drawed blood.
+- Almost for everyone, except for the very youngest due to the "graphical" when shooting.
 - Those who enjoys an fast and simple pasttime game.
-
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-
-- As a user type, I want to perform an action, so that I can achieve a goal.
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
-
-### Existing Features
-
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- A JavaScript game made in p5.js library.
+- CSS menu with social links.
 
 ### Features Left to Implement
 
-- Another feature idea
+- In upcoming versions new graphic will be implented.
+- The option to set game difficulty.
+- Be able to choose timers, how many seconds before game ends.
+- High Score.
 
 ## Technologies Used
 
@@ -77,41 +66,33 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+### This project has been tested without issues on following browsers and operating systems:
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+#### Windows 10
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+- Microsoft Edge build 18363
+- Internet Explorer 11 Version 11.719.18362.0
+- Google Chrome Version 80.0.3987.149
+- Mozilla Firefox Version 74.0
 
-1. Contact form:
-   1. Go to the "Contact Us" page
-   2. Try to submit the empty form and verify that an error message about the required fields appears
-   3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-   4. Try to submit the form with all inputs valid and verify that a success message appears.
+#### macOS Catalina Version 10.15.3
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+- Safari Version 13.0.5
+- Google Chrome Version 80.0.3987.163
+- Mozilla Firefox Version 74.0.1
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+Live version of my webite (https://chris8one.github.io/MS2-project/)
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
+The source code is stored at (https://github.com/Chris8one/MS2-project)
 
 ## Credits
 
-### Persons
+### Social Links Menu
 
-- My brother who guided my through this project!
+- Long time ago since I stumbled on that code, can't remember who it was I got it from.
+- If you recognize it, let me know! Thanks to the maker of the code!
 
 ### Media
 
@@ -124,3 +105,7 @@ The photos used in this site were obtained from:
 - [Pngimg](https://pngimg.com)
 
 ### Acknowledgements
+
+#### [My brother Michael]()
+- Who guided my through out this project!
+- Many thanks to him!
