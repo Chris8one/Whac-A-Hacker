@@ -12,21 +12,22 @@
     <title>Whac-A-Hacker</title>
     <style>
       body {
-        background: url("assets/img/hackbackgr.jpg");
+        background: url("assets/img/neonanonwall.jpg");
+        background-size: cover;
       }
     </style>
   </head>
 
   <body>
     <header>
-      <h1 id="heading">Whac-A-Hacker v1.0</h1>
+      <h1 class="neon-pink">Whac-A-Hacker</h1>
     </header>
     <h3 id="gameText">
       You have 20 seconds to take out as many hackers as you can before the time
       runs out! <br />
       Good Luck!
     </h3>
-    <div id="btnDiv">
+    <!-- <div id="btnDiv">
       <input
         class="btn hvr-shutter-in-vertical"
         id="startBtn"
@@ -34,6 +35,9 @@
         value=" [ Enter Game ] "
         onclick="startGame()"
       />
+    </div> -->
+    <div id="btnDiv">
+      <a onClick="startGame()" class="neon-button">[ ENTER GAME ]</a>
     </div>
     <div class="icons">
       <ul>
@@ -44,17 +48,17 @@
         </a>
         <a href="https://www.facebook.com/chris8one" target="_blank">
           <li class="facebook">
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
           </li>
         </a>
         <a href="https://www.twitter.com/chris8one" target="_blank">
           <li class="twitter">
-            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
           </li>
         </a>
         <a href="https://www.snapchat.com/add/chris8one" target="_blank">
           <li class="snapchat">
-            <i class="fa fa-snapchat-square" aria-hidden="true"></i>
+            <i class="fa fa-snapchat-ghost" aria-hidden="true"></i>
           </li>
         </a>
       </ul>
