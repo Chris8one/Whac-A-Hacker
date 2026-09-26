@@ -8,7 +8,7 @@ I wanted to make my own version of it, so the choice became to shoot hackers.
 Who this game is for:
 
 - Almost for everyone, except for the very youngest due to the "graphical" when shooting.
-- Those who enjoys a fast and simple pastime game.
+- Those who enjoy a fast and simple pastime game.
 
 ## Features
 
@@ -17,9 +17,9 @@ Who this game is for:
 
 ### Features Left to Implement
 
-- In upcoming versions new graphic will be implemented.
+- In upcoming versions updated graphic will be implemented.
 - The option to set game difficulty.
-- Be able to choose timers, how many seconds before game ends.
+- Allow the player to choose timers, how many seconds before game ends.
 - High Score.
 
 ## Technologies Used
@@ -34,7 +34,7 @@ Who this game is for:
 
 ### [Google Fonts](https://fonts.google.com)
 
-- The change some fonts
+- To change some fonts
 
 ### [Font Awesome 4](https://fontawesome.com/v4.7.0/)
 
@@ -84,7 +84,7 @@ Who this game is for:
 ## Deployment
 
 Play the game here:
-Live version of my webite (https://chris8one.github.io/Whac-A-Hacker/)
+Live version of my website (https://chris8one.github.io/Whac-A-Hacker/)
 
 ## Credits
 
