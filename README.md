@@ -8,7 +8,7 @@ I wanted to make my own version of it, so the choice became to shoot hackers.
 Who this game is for:
 
 - Almost for everyone, except for the very youngest due to the "graphical" when shooting.
-- Those who enjoys an fast and simple pasttime game.
+- Those who enjoys a fast and simple pastime game.
 
 ## Features
 
@@ -17,7 +17,7 @@ Who this game is for:
 
 ### Features Left to Implement
 
-- In upcoming versions new graphic will be implented.
+- In upcoming versions new graphic will be implemented.
 - The option to set game difficulty.
 - Be able to choose timers, how many seconds before game ends.
 - High Score.
@@ -50,7 +50,7 @@ Who this game is for:
 
 ### [GitHub](https://github.com)
 
-- Used to store the repositorie and for the live website
+- Used to store the repository and for the live website
 
 ### [p5.js](https://www.p5js.org)
 
@@ -83,16 +83,10 @@ Who this game is for:
 
 ## Deployment
 
-Live version of my webite (https://chris8one.github.io/MS2-project/)
-
-The source code is stored at (https://github.com/Chris8one/MS2-project)
+Play the game here:
+Live version of my webite (https://chris8one.github.io/Whac-A-Hacker/)
 
 ## Credits
-
-### Social Links Menu
-
-- Long time ago since I stumbled on that code, can't remember who it was I got it from.
-- If you recognize it, let me know! Thanks to the maker of the code!
 
 ### Media
 
@@ -107,5 +101,5 @@ The photos used in this site were obtained from:
 ### Acknowledgements
 
 #### [My brother Michael]()
-- Who guided my through out this project!
+- Who guided me throughout this project!
 - Many thanks to him!
